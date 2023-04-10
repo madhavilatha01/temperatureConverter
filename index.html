@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Converter</title>
+    </head>
+    <body style="padding:100px;padding-left:500px;padding-right:500px;">
+        <center><h1>Temperature Converter</h1>
+        <div style = "border: 2px solid black;border-radius:5px;padding:20px;background-color:lightskyblue;box-shadow: 5px 2px gray;"">
+            <table><tr><td>
+            <label>Enter Fahrenheit &nbsp;&nbsp;&nbsp;</label><input id="inputFahrenheit" type="number"></td>
+            <td><input type="button" value="convert" onclick="temperatureConverter()" ></td>
+            </tr></table><br>
+            <label>Result in Celsius &nbsp;&nbsp;&nbsp;</label><p id="outputCelsius"></p></center><br><br>
+        </div>
+        <div style = "border: 2px solid black;border-radius:5px;padding:20px;background-color:lightskyblue;box-shadow: 5px 2px gray;">
+            <center><table><tr><td>
+            <label>Enter Celsius &nbsp;&nbsp;&nbsp;</label><input id="inputFahrenheit1" type="number"></td>
+            <td><input type="button" value="convert" onclick="temperatureConverter1()" ></td>
+            </tr></table><br>
+            <label>Result in Fahrenheit &nbsp;&nbsp;&nbsp;</label><p id="outputCelsius1"></p></center><br>
+        </div>
+        <script>
+            function temperatureConverter() {
+            var num = document.getElementById("inputFahrenheit1").value;
+            var res = (num-32)/1.8;
+            document.getElementById("outputCelsius").textContent = res;
+            }
+            function temperatureConverter1() {
+            var num1 = document.getElementById("inputFahrenheit1").value;
+            var res1 = (num1*95)+32;
+            document.getElementById("outputCelsius1").textContent = res1;
+            }
+        </script>
+    </body>
+</html>
